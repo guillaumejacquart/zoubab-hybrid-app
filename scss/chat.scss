@@ -1,0 +1,92 @@
+$chat-img-size: 35px;
+$chat-msg-bkg-color: #2469A6;
+
+#chat-container{
+	background-color:transparent;
+}
+
+#messages .item{
+	margin:0;
+	border:none;
+	border-radius:10px;
+	padding: 0px 5px;	
+	
+	h2{
+		padding: 3px;
+	}
+	
+	&.has-thumbnail{
+		padding-top: 5px;
+	}
+	
+	em{
+		float:right;
+		font-size:0.8rem;
+	}
+	
+	.message{
+		background-color:$chat-msg-bkg-color;
+		color:white;
+		padding: 7px;
+		margin-left: $chat-img-size + 15px;
+		border-radius:5px;
+		display:inline-block;
+		position:relative;
+		
+		&.has-thumbnail{
+			margin-left: 0;
+		}
+		
+		> span{
+			position: absolute;
+			right: -100px;
+			color: #333;
+		}
+	}
+	
+	.img {
+		background-repeat: no-repeat;
+		height: $chat-img-size;
+		width: $chat-img-size;
+		margin: 5px;
+		float: left;
+		background-size: cover;
+		background-position: center;
+		border-radius: 50%;
+		border: 1px solid black;
+		margin-right: 10px;
+		display:none;
+		
+		&.active{
+			display:block;
+		}
+	}
+}
+
+
+
+#users .item{
+	padding: 7px;
+}
+
+#users .item {
+	div{
+		display:inline-block;
+		vertical-align:middle;
+		max-width: 80%;
+	}
+	
+	.img {
+		height: 28px;
+		width: 28px;
+		margin-right: 10px;
+		border-radius: 50px;
+		border:1px solid black;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+#chat-form input{
+	width: 100%;
+}

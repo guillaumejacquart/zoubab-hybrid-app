@@ -1,0 +1,24 @@
+
+<ion-view view-title="Register">
+	<ion-content id="register-container">	
+
+		<div class="logo"></div>
+		<form class="form-signin" ng-submit="register.submit()">
+			<div class="list">
+				<label class="item assertive" ng-show="register.error">
+					{{register.error}}
+				</label>
+				<label class="item item-input">
+					<input type="email" placeholder="Email" ng-model="register.user.username">
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="Password" ng-model="register.user.password">
+				</label>
+			</div>
+			<div class="padding">
+				<button class="button button-block button-positive">Register</button>
+			</div>
+		</form>
+	</ion-content>
+	
+</ion-view>

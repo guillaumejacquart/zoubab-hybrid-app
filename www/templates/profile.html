@@ -1,0 +1,35 @@
+<ion-view view-title="Profile">
+	<ion-content id="profile-container">	
+		
+		<form class="form-horizontal" ng-submit="profile.submit()">		
+			<div class="list">
+				<label class="item balanced" ng-show="profile.saved">
+					Profile saved !
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">First Name</span>
+					<input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="" ng-model="profile.user.username">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email</span>
+					<input disabled="true" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" ng-model="profile.user.email">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Picture</span>					
+					
+					<div>
+						<input id="inputPicture" type="file" nv-file-select uploader="profile.uploader"/>
+					</div>
+					<div>
+						<img src="{{profile.user.picturePath}}" class="img-responsive"/>
+					</div>
+				</label>
+				<div class="padding">
+					<button class="button button-block button-positive">Submit</button>
+					<button class="button button-block button-clear button-positive" ng-click="profile.logout()">Logout</button>
+				</div>
+			</div>
+		</form>
+		
+	</ion-content>	
+</ion-view>
